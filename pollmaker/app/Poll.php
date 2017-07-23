@@ -11,11 +11,11 @@ class Poll extends Model{
 	protected $table = 'poll';
 
 	public function scopeExpired($query){
-		 return $query->whereRaw('created_at > expire_date');
+		 return $query->whereRaw('expire_date < "'.date("Y-m-d H:i:s").'"');
 	}
 
 	public function scopeCurrent($query){
-		 return $query->whereRaw('expire_date > created_at');
+		 return $query->whereRaw('expire_date > "'.date("Y-m-d H:i:s").'"');
 	}
 
     public function votes()
@@ -23,3 +23,4 @@ class Poll extends Model{
         return $this->hasMany('App\Votes');
     }
 }
+

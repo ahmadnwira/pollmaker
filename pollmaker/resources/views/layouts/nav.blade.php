@@ -16,6 +16,13 @@
 		</a>
 
       </li>
+      <li>
+        <form action="/logout" method="post">
+            {{ csrf_field() }}
+            <button class="btn btn-link">logout</button>
+          
+        </form>
+      </li>
     </ul>
   </div>
 </nav>

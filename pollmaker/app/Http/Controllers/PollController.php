@@ -9,7 +9,7 @@ use Auth;
 class PollController extends Controller{
 
   function __construct(){
-    $this->middleware('auth');
+    $this->middleware('auth', ['except' => ['show'] ]);
   }
     
   public function index(){
@@ -52,7 +52,10 @@ class PollController extends Controller{
    	/* when ever poll hits expiration delete token AKA set token=""  */
 
   public function show(Poll $poll){
-    $votes = $poll->votes ;
-    return view('poll/poll',['votes'=>$votes,'poll'=>$poll]);
+    if(Auth::check()){
+      $votes = $poll->votes ;
+      return view('poll/poll',['votes'=>$votes,'poll'=>$poll]);
+    }
+    return redirect('voting/'.$poll->id.'/polls');
   }
 }
