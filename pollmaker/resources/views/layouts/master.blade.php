@@ -5,3 +5,5 @@
 </div>
 
 @include('layouts/footer')
+
+@yield('chart')

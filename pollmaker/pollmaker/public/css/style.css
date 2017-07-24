@@ -1,0 +1,41 @@
+/* helpers */
+.space{
+    margin: 4em 0em 0em 32em;
+}
+
+/* customizatoin */
+.btn-info{
+	background-color:#fff;
+	color:#5bc0de;
+	transition:background-color .25s;
+	border:2px solid #46b8da;
+	border-radius:0;
+}
+.btn-default{
+	border:2px solid #ccc;
+	margin-right:.25em;
+}
+
+.badge-lead{
+	background-color:#ffeb3b;
+	color:#000;
+}
+
+.badge-winner{
+	background-color:#4caf50;	
+}
+
+.jumbotron{
+	margin-top:0;
+	top:0;
+	background-color:#00bcd4;
+	color:#fff;
+	padding-left:2em;
+}
+.navbar-inverse{
+	margin-bottom:0;
+}
+
+#myChart{
+    margin-left:8em;
+}

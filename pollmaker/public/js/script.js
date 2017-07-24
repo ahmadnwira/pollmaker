@@ -23,19 +23,3 @@ function checkInputs(){
 	  $('#action').attr('disabled', disable); // apply the final state to the button
 	});	
 }
-
-('document').ready(function (){
-		$.ajax({
-        
-        	url:'/efforts',
-       		method:'get',
-        	success:function(data){
-        		console.log(data);
-        	},
-
-        	error:function(data){ console.log('error'); } 
-    	});
-
-	});
-
-
